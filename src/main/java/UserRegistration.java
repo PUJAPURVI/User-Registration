@@ -5,9 +5,13 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
         public static final String NAME_PATTERN = "^[A-Z][a-z]{2,}";
+        public static final String LAST_NAME_PATTERN = "^[A-Z][a-z]{2,}";
 
         public boolean validateFirstName(String firstName) {
             return patternChecker(firstName, NAME_PATTERN);
+        }
+        public boolean validateLastName(String lastName) {
+            return patternChecker(lastName, LAST_NAME_PATTERN);
         }
 
         public boolean patternChecker(String input, String fieldPattern) {
