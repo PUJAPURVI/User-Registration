@@ -48,5 +48,10 @@ public class UserRegistrationTest {
         boolean result = userRegistration.validateLastName("Nerk@r");
         Assert.assertFalse(result);
     }
+    @Test
+    public void givenEmail_WhenValid_ShouldReturnTrue() {
+        boolean result = userRegistration.validateEmail("abc-100@yahoo.com");
+        Assert.assertTrue(result);
+    }
 }
 
