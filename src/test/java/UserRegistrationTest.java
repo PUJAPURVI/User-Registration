@@ -58,5 +58,10 @@ public class UserRegistrationTest {
         boolean result = userRegistration.validateMobileNumber("+91 8780803252");
         Assert.assertTrue(result);
     }
+    @Test
+    public void givenPassword_whenValid_showReturnTrue() {
+        boolean result = userRegistration.validatePassword("Pujan9876");
+        Assert.assertTrue(result);
+    }
 }
 
