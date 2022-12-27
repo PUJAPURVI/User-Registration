@@ -53,5 +53,10 @@ public class UserRegistrationTest {
         boolean result = userRegistration.validateEmail("abc-100@yahoo.com");
         Assert.assertTrue(result);
     }
+    @Test
+    public void givenMobileNumber_whenValid_showReturnTrue() {
+        boolean result = userRegistration.validateMobileNumber("+91 8780803252");
+        Assert.assertTrue(result);
+    }
 }
 
