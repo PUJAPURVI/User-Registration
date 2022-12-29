@@ -17,6 +17,9 @@ public class UserRegistration {
         public static final String PASSWORD_Pattern_AT_LEAST_ONE_NUMERIC_NAUMBER = "^(?=.*[A-Z])(?=.*[0-9])" +
             "[a-zA-Z0-9]{8,}$";
 
+        public static final String PASSWORD_PATTERN_EXACTLY_ONE_SPECIAL_CHARACTER = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[$@!%])[a-zA-Z0-9$@!%]{8,}$";
+
+
     public boolean validateFirstName(String firstName) {
             return patternChecker(firstName, NAME_PATTERN);
         }
@@ -37,6 +40,9 @@ public class UserRegistration {
         }
         public boolean validatePasswordAtLeastOneNumericNumber(String password) {
         return patternChecker(password,PASSWORD_Pattern_AT_LEAST_ONE_NUMERIC_NAUMBER);
+        }
+        public boolean validatePasswordExactOneSpecialCharacter(String password) {
+        return patternChecker(password,PASSWORD_PATTERN_EXACTLY_ONE_SPECIAL_CHARACTER);
         }
 
         public boolean patternChecker(String input, String fieldPattern) {
