@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4245a093-32de-4d86-b984-033794e0d59d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserRegistration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" afterDir="false" />
     </list>
@@ -39,7 +41,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.UserRegistrationTest.givenPassword_atLeast_oneUpperCase">
+  <component name="RunManager" selected="JUnit.UserRegistrationTest">
     <configuration name="UserRegistrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="assesmentJunit" />
       <option name="PACKAGE_NAME" value="" />
@@ -91,11 +93,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserRegistrationTest" />
         <item itemvalue="JUnit.UserRegistrationTest.givenPassword_atLeast_oneUpperCase" />
         <item itemvalue="JUnit.UserRegistrationTest.givenPassword_whenValid_showReturnTrue" />
         <item itemvalue="JUnit.UserRegistrationTest.givenMobileNumber_whenValid_showReturnTrue" />
         <item itemvalue="JUnit.UserRegistrationTest.givenEmail_WhenValid_ShouldReturnTrue" />
-        <item itemvalue="JUnit.UserRegistrationTest" />
       </list>
     </recent_temporary>
   </component>

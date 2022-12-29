@@ -68,5 +68,9 @@ public class UserRegistrationTest {
         boolean result = userRegistration.validatePasswordAtLeastOneUpperCase("Puja12334");
         Assert.assertTrue(result);
     }
+    @Test
+    public void givenPassword_atLeast_oneNumericNumber() {
+        boolean result = userRegistration.validatePasswordAtLeastOneNumericNumber("Puja12@1");
+    }
 }
 

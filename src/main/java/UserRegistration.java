@@ -13,7 +13,11 @@ public class UserRegistration {
         public static final String PASSWORD_PATTERN =  "^[a-zA-Z0-9]{8,}$";
 
         public static final String PASSWORD_PATTERN_AT_LEAST_ONE_UPPER_CASE = "^((?=.*[A-Z]))[a-zA-Z0-9]{8,}$";
-        public boolean validateFirstName(String firstName) {
+
+        public static final String PASSWORD_Pattern_AT_LEAST_ONE_NUMERIC_NAUMBER = "^(?=.*[A-Z])(?=.*[0-9])" +
+            "[a-zA-Z0-9]{8,}$";
+
+    public boolean validateFirstName(String firstName) {
             return patternChecker(firstName, NAME_PATTERN);
         }
         public boolean validateLastName(String lastName) {
@@ -31,6 +35,9 @@ public class UserRegistration {
         public boolean validatePasswordAtLeastOneUpperCase(String password) {
             return patternChecker(password, PASSWORD_PATTERN_AT_LEAST_ONE_UPPER_CASE);
         }
+        public boolean validatePasswordAtLeastOneNumericNumber(String password) {
+        return patternChecker(password,PASSWORD_Pattern_AT_LEAST_ONE_NUMERIC_NAUMBER);
+        }
 
         public boolean patternChecker(String input, String fieldPattern) {
             Pattern pattern = Pattern.compile(fieldPattern);
@@ -38,4 +45,5 @@ public class UserRegistration {
             return matcher.matches();
         }
     }
+
 
