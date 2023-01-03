@@ -71,11 +71,18 @@ public class UserRegistrationTest {
     @Test
     public void givenPassword_atLeast_oneNumericNumber() {
         boolean result = userRegistration.validatePasswordAtLeastOneNumericNumber("Puja12@1");
+        Assert.assertTrue(result);
     }
 
     @Test
     public void givenPassword_exactly_one_special_character() {
         boolean result = userRegistration.validatePasswordExactOneSpecialCharacter("Puja@123");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void givenAllEmailSample() {
+        boolean result = userRegistration.validPasswordForAllEmailSample("abc.100@abc.com.au");
+        Assert.assertTrue(result); ;
     }
 
 }
