@@ -70,7 +70,7 @@ public class UserRegistrationTest {
     }
     @Test
     public void givenPassword_atLeast_oneNumericNumber() {
-        boolean result = userRegistration.validatePasswordAtLeastOneNumericNumber("Puja12@1");
+        boolean result = userRegistration.validatePasswordAtLeastOneNumericNumber("Purvi123");
         Assert.assertTrue(result);
     }
 
@@ -84,6 +84,55 @@ public class UserRegistrationTest {
         boolean result = userRegistration.validPasswordForAllEmailSample("abc.100@abc.com.au");
         Assert.assertTrue(result); ;
     }
+    @Test
+
+    public void lastNameSadTest() {
+        boolean result = userRegistration.validateLastName("Bagle");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void firstNameSadTest() {
+        boolean result = userRegistration.validateFirstName("Purvi");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void emailSadTest() {
+        boolean result = userRegistration.validateEmail("abc-100@yahoo.com");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void phoneNumberSadTest() {
+        boolean result = userRegistration.validateMobileNumber("+91 9998686118");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void passwordSadTest() {
+        boolean result = userRegistration.validatePassword("Puri3289");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void passwordAtLeastOneUpperCaseSadTest() {
+        boolean result = userRegistration.validatePasswordAtLeastOneUpperCase("Purvi12334");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void passwordAtLeastOneSpecialCharacterSadTest() {
+        boolean result = userRegistration.validatePasswordExactOneSpecialCharacter("Purvi@12334");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void passwordAtLeastOneNumericNumberSadTest() {
+        boolean result = userRegistration.validatePasswordAtLeastOneNumericNumber("Purvi123");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void allEmailSampleSadTest() {
+        boolean result = userRegistration.validPasswordForAllEmailSample("abc.100@abc.com.au");
+        Assert.assertTrue(result);
+    }
+
+
+
 
 }
 
