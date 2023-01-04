@@ -46,7 +46,7 @@ public class UserRegistration {
         return patternChecker(password, PASSWORD_PATTERN);
     }
 
-    public boolean validatePasswordAtLeastOneUpperCase(String password) throws UserRegistrationException{
+    public boolean validatePasswordAtLeastOneUpperCase(String password) throws UserRegistrationException {
         return patternChecker(password, PASSWORD_PATTERN_AT_LEAST_ONE_UPPER_CASE);
     }
 
@@ -76,87 +76,7 @@ public class UserRegistration {
                     "Entry Should Be Not null ");
         }
     }
-
-    public void validateFirstName() {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter Your First Name");
-        String name = sc.next();
-
-        Pattern pattern = Pattern.compile(NAME_PATTERN);
-        Matcher matcher = pattern.matcher(name);
-
-        if (matcher.matches()) {
-            System.out.println("Given First Name Is Valid.");
-        } else {
-            System.out.println("Given First Name Is InValid!");
-        }
-    }
-
-    public void validateLastName() {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter your last name");
-        String name = sc.next();
-
-        Pattern pattern = Pattern.compile(NAME_PATTERN);
-        Matcher matcher = pattern.matcher(name);
-
-        if (matcher.matches()) {
-            System.out.println("Given Last Name Is Valid.");
-        } else {
-            System.out.println("Given Last Name Is InValid!");
-        }
-    }
-
-    public void validateEmail() {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter Your Email Id");
-        String email = sc.next();
-
-        Pattern pattern = Pattern.compile(EMAIL_PATTERN);
-        Matcher matcher = pattern.matcher(email);
-
-        if (matcher.matches()) {
-            System.out.println("Given Email Id Is Valid.");
-        } else {
-            System.out.println("Given Email Id Is InValid!");
-        }
-    }
-
-    public void validateMobileNumber() {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter Your Mobile Number");
-        String mobile = sc.nextLine();
-
-        Pattern pattern = Pattern.compile(MOBILE_NUMBER_PATTERN);
-        Matcher matcher = pattern.matcher(mobile);
-
-        if (matcher.matches()) {
-            System.out.println("Given Mobile Number Is Valid.");
-        } else {
-            System.out.println("Given Mobile Number Is InValid!");
-        }
-    }
-
-    public void validatePassword() {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter Your Password");
-        String password = sc.next();
-
-        Pattern pattern = Pattern.compile(PASSWORD_PATTERN);
-        Matcher matcher = pattern.matcher(password);
-
-        if (matcher.matches()) {
-            System.out.println("Given Password Is Valid.");
-        } else {
-            System.out.println("Given Password Is InValid!");
-        }
-    }
-
 }
+
 
 
