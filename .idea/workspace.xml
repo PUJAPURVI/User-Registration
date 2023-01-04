@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4245a093-32de-4d86-b984-033794e0d59d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/UserRegistrationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/UserRegistrationMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ValidateEmailIdTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserRegistration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="4245a093-32de-4d86-b984-033794e0d59d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
