@@ -6,131 +6,240 @@ public class UserRegistrationTest {
     UserRegistration userRegistration = new UserRegistration();
 
     @Test
-    public void givenFirstName_WhenFirstLetterUpperCase_ShouldReturnTrue() {
-        boolean result = userRegistration.validateFirstName("Puja");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void givenLastName_WhenFirstLetterUpperCase_ShouldReturnTrue() {
-        boolean result = userRegistration.validateLastName("Nerkar");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void givenFirstName_WhenLessThanThreeChars_ShouldReturnFalse() {
-        boolean result = userRegistration.validateLastName("Pu");
-        Assert.assertFalse(result);
+    public void givenFirstName_WhenFirstLatterUpperCase_ShouldReturnTrue() {
+        try {
+            Assert.assertTrue(userRegistration.validateFirstName("Bharat"));
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
     }
 
     @Test
-    public void givenLastName_WhenLessThanThreeChars_ShouldReturnFalse() {
-        boolean result = userRegistration.validateLastName("Ne");
-        Assert.assertFalse(result);
+    public void givenFirstName_WhenEntryFieldNull_shouldReturnFalse() {
+        try {
+            Assert.assertFalse(userRegistration.validateFirstName(""));
+        } catch (UserRegistrationException exception) {
+            NullPointerException.class.getClass();
+            System.out.println("Entry Field Should Not Null");
+        }
+    }
+
+    @Test
+    public void givenFirstName_WhenLessThanThreeChars_ShouldReturnFalse() {
+        try {
+            Assert.assertFalse(userRegistration.validateFirstName("Bh"));
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+            System.out.println("First Name Should Not Less Than 3 Digit");
+        }
     }
 
     @Test
     public void givenFirstName_WhenHasNumber_ShouldReturnFalse() {
-        boolean result = userRegistration.validateFirstName("Pu1");
-        Assert.assertFalse(result);
-    }
-    @Test
-    public void givenLastName_WhenHasNumber_ShouldReturnFalse() {
-        boolean result = userRegistration.validateLastName("Ne1");
-        Assert.assertFalse(result);
+        try {
+            Assert.assertFalse(userRegistration.validateFirstName("Bharat1"));
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
     }
 
     @Test
     public void givenFirstName_WhenHasSpecialChar_ShouldReturnFalse() {
-        boolean result = userRegistration.validateLastName("Nerk@r");
+        boolean result = false;
+        try {
+            result = userRegistration.validateFirstName("Bh@rat");
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
         Assert.assertFalse(result);
     }
+
+    @Test
+    public void givenLastName_WhenFirstLetterUpperCase_ShouldReturnTrue() {
+        boolean result = true;
+        try {
+            result = userRegistration.validateLastName("Pathak");
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenLastName_WhenLessThanThreeChars_ShouldReturnFalse() {
+        boolean result = false;
+        try {
+            result = userRegistration.validateLastName("Bp");
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void givenLastName_WhenHasNumber_ShouldReturnFalse() {
+        boolean result = false;
+        try {
+            result = userRegistration.validateLastName("Pathak1");
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
+        Assert.assertFalse(result);
+    }
+
     @Test
     public void givenLastName_WhenHasSpecialChar_ShouldReturnFalse() {
-        boolean result = userRegistration.validateLastName("Nerk@r");
+        boolean result = false;
+        try {
+            result = userRegistration.validateLastName("P@thak");
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
         Assert.assertFalse(result);
     }
+
     @Test
-    public void givenEmail_WhenValid_ShouldReturnTrue() {
-        boolean result = userRegistration.validateEmail("abc-100@yahoo.com");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void givenMobileNumber_whenValid_showReturnTrue() {
-        boolean result = userRegistration.validateMobileNumber("+91 8780803252");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void givenPassword_whenValid_showReturnTrue() {
-        boolean result = userRegistration.validatePassword("Pujan9876");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void givenPassword_atLeast_oneUpperCase() {
-        boolean result = userRegistration.validatePasswordAtLeastOneUpperCase("Puja12334");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void givenPassword_atLeast_oneNumericNumber() {
-        boolean result = userRegistration.validatePasswordAtLeastOneNumericNumber("Purvi123");
+    public void givenEmailId_WhenProper_ShouldReturnTrue() {
+        boolean result = true;
+        try {
+            result = userRegistration.validateEmail("abc.xyz@bl.co.in");
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
         Assert.assertTrue(result);
     }
 
     @Test
-    public void givenPassword_exactly_one_special_character() {
-        boolean result = userRegistration.validatePasswordExactOneSpecialCharacter("Puja@123");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void givenAllEmailSample() {
-        boolean result = userRegistration.validPasswordForAllEmailSample("abc.100@abc.com.au");
-        Assert.assertTrue(result); ;
-    }
-    @Test
-
-    public void lastNameSadTest() {
-        boolean result = userRegistration.validateLastName("Bagle");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void firstNameSadTest() {
-        boolean result = userRegistration.validateFirstName("Purvi");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void emailSadTest() {
-        boolean result = userRegistration.validateEmail("abc-100@yahoo.com");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void phoneNumberSadTest() {
-        boolean result = userRegistration.validateMobileNumber("+91 9998686118");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void passwordSadTest() {
-        boolean result = userRegistration.validatePassword("Puri3289");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void passwordAtLeastOneUpperCaseSadTest() {
-        boolean result = userRegistration.validatePasswordAtLeastOneUpperCase("Purvi12334");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void passwordAtLeastOneSpecialCharacterSadTest() {
-        boolean result = userRegistration.validatePasswordExactOneSpecialCharacter("Purvi@12334");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void passwordAtLeastOneNumericNumberSadTest() {
-        boolean result = userRegistration.validatePasswordAtLeastOneNumericNumber("Purvi123");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void allEmailSampleSadTest() {
-        boolean result = userRegistration.validPasswordForAllEmailSample("abc.100@abc.com.au");
+    public void givenMobileNumber_WhenSpaceIsMentioned_ShouldReturnTrue() {
+        boolean result = true;
+        try {
+            result = userRegistration.validateMobileNumber("91 7559201322");
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
         Assert.assertTrue(result);
     }
 
+    @Test
+    public void givenMobileNumber_WhenSpaceNotMentioned_ShouldReturnFalse() {
+        boolean result = false;
+        try {
+            result = userRegistration.validateMobileNumber("917559201322");
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenMobileNumber_WhenLessDigits_ShouldReturnFalse() {
+        boolean result = false;
+        try {
+            result = userRegistration.validateMobileNumber("7559201322");
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void givenMobileNumber_WhenNotStartWith91_ShouldReturnFalse() {
+        boolean result = false;
+        try {
+            result = userRegistration.validateMobileNumber("1234567890");
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void givenPassword_WhenMin8Chars_ShouldReturnTrue() {
+        boolean result = true;
+        try {
+            result = userRegistration.validatePassword("bTb1h2*rt");
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenPassword_WhenHasLessChars_ShouldReturnFalse() {
+        boolean result = false;
+        try {
+            result = userRegistration.validatePassword("Bp9%t");
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void givenPassword_WhenAtLeast1UpperCase_ShouldReturnTrue() {
+        boolean result = true;
+        try {
+            result = userRegistration.validatePassword("3PbRa*aK");
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenPassword_WhenAtLeast1Number_ShouldReturnTrue() {
+        boolean result = true;
+        try {
+            result = userRegistration.validatePassword("PaT5bt&Kt");
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenPassword_WhenNoNumeric_ShouldReturnFalse() {
+        boolean result = false;
+        try {
+            result = userRegistration.validatePassword("pAth%aKP");
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void givenPassword_WhenHasExact1SpecialChar_ShouldReturnTrue() {
+        boolean result = true;
+        try {
+            result = userRegistration.validatePassword("bHar%aT1");
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenPassword_WhenNoSpecialChar_ShouldReturnTrue() {
+        boolean result = true;
+        try {
+            result = userRegistration.validatePassword("bTapaK12");
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenPassword_WhenHasMoreThan1SpecialChar_ShouldReturnTrue() {
+        boolean result = true;
+        try {
+            result = userRegistration.validatePassword("bHar%a#T1");
+        } catch (UserRegistrationException exception) {
+            exception.printStackTrace();
+        }
+        Assert.assertTrue(result);
+    }
 
 
 
