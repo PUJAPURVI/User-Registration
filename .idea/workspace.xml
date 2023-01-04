@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4245a093-32de-4d86-b984-033794e0d59d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/UserRegistrationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/UserRegistrationMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ValidateEmailIdTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserRegistration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,22 +43,12 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.UserRegistrationTest">
+  <component name="RunManager" selected="JUnit.ValidateEmailIdTest.givenEmailId_WhenProper_ShouldReturnExpectedResult">
     <configuration name="UserRegistrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="assesmentJunit" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="UserRegistrationTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserRegistrationTest.emailSadTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="assesmentJunit" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserRegistrationTest" />
-      <option name="METHOD_NAME" value="emailSadTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -79,11 +73,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserRegistrationTest.passwordSadTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ValidateEmailIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="assesmentJunit" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserRegistrationTest" />
-      <option name="METHOD_NAME" value="passwordSadTest" />
+      <option name="MAIN_CLASS_NAME" value="ValidateEmailIdTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValidateEmailIdTest.givenEmailId_WhenProper_ShouldReturnExpectedResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="assesmentJunit" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ValidateEmailIdTest" />
+      <option name="METHOD_NAME" value="givenEmailId_WhenProper_ShouldReturnExpectedResult" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -91,11 +94,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ValidateEmailIdTest.givenEmailId_WhenProper_ShouldReturnExpectedResult" />
+        <item itemvalue="JUnit.ValidateEmailIdTest" />
         <item itemvalue="JUnit.UserRegistrationTest" />
         <item itemvalue="JUnit.UserRegistrationTest.passwordAtLeastOneNumericNumberSadTest" />
         <item itemvalue="JUnit.UserRegistrationTest.givenPassword_atLeast_oneNumericNumber" />
-        <item itemvalue="JUnit.UserRegistrationTest.emailSadTest" />
-        <item itemvalue="JUnit.UserRegistrationTest.passwordSadTest" />
       </list>
     </recent_temporary>
   </component>
